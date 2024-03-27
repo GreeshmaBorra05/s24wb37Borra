@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var groceriesRouter = require('./routes/groceries'); //groceries endpoint added
+var gridRouter = require('./routes/grid'); //grid endpoint added
+
 
 
 var app = express();
@@ -24,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/groceries', groceriesRouter); 
+app.use('/grid', gridRouter); //grid endpoint added
 
 
 // catch 404 and forward to error handler
