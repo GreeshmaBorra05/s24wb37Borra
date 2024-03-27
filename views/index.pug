@@ -4,3 +4,22 @@ block content
   h1= title
   p Welcome to Asssignment 10 #{title}
   button(type="button", class="btn btn-primary") Press me
+   br
+  br
+  //- id of "double" added to div and text to "Up the amount"
+  div#double Up the amount
+  br
+  
+  
+  //-block-script
+  script.
+    // JavaScript code
+    var value = 0;
+    var power = 1;
+
+    function double() {
+      value += 1;
+      power *= 2;
+      document.getElementById("double").innerText = "Two to the power " + value + " is " + power;
+    }
+    
