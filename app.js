@@ -27,7 +27,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/groceries', groceriesRouter); 
 app.use('/grid', gridRouter); //grid endpoint added
-app.use('/pick',pickRouter);
+app.use('/pick', pickRouter); //pick endpoint added
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
