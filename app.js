@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var groceriesRouter = require('./routes/groceries'); //groceries endpoint added
 var gridRouter = require('./routes/grid'); //grid endpoint added
-var gridRouter=require('./routes/pick');
+var pickRouter = require('./routes/pick');//pick endpoint added
 
 
 var app = express();
