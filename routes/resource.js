@@ -6,6 +6,8 @@ var groceries_controller = require('../controllers/groceries');
 /// API ROUTE ///
 // GET resources base.
 router.get('/', api_controller.api);
+
+
 /// groceries ROUTES ///
 // POST request for creating a groceries.
 router.post('/groceries', groceries_controller.groceries_create_post);
