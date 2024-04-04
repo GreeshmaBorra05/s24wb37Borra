@@ -1,23 +1,30 @@
 extends layout
-
+ 
 block content
   h1= title
-  
+ 
   div.container-fluid
     div.row
-    let groceries = results
-        
-      each groceries, index in results
-        .col-sm-2 
+      -
+        let results = [
+          { item_type: 'Candies', item_name: 'Kitkat', item_price: 0.75 },
+          { item_type: 'Snacks', item_name: 'Mixture', item_price: 20 },
+          { item_type: 'Beverages', item_name: '20', item_price: 10 }
+        ]
+       
+      each groceries,index in results
+        .col-sm-2
         div.col-sm-2(onclick=`buy(${index})`)
-        
-          p item_type: #{groceries.item_type}
-          p item_name : #{groceries.item_name}
-          p item_price: $#{groceries.item_price.toFixed(2)}
-
+       
+          p Item type: #{.item_type}
+          p Name: #{groceries.item_name}
+          p Price: $#{groceries.item_price.toFixed(2)}
+ 
   a(href="/") Back to index
-
-   script.
-    function buy(index) {
-        alert(`You purchased item ${index}`);
-    }
+ 
+    script.
+        function buy(index) {
+            alert(`You purchased item ${index}`);
+        }
+  
+ 
