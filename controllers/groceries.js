@@ -3,7 +3,7 @@ var groceries = require('../models/groceries');
 exports.groceries_list = function (req, res) {
     res.send('NOT IMPLEMENTED: groceries list');
 };
-// for a specific groceries.
+// for a specific groceries..
 exports.groceries_detail = async function(req, res) {
 console.log("detail" + req.params.id)
 try {
